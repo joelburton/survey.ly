@@ -15,4 +15,41 @@ Demonstration of Survey.ly survey system:
 
 - After submitting a form, the data is sent to a server (mocked out in this code),
   and the form is reset.
-  
+
+Design
+------
+
+::
+
+  +-----------------------------------------------------------------------------+
+  | App   (sitewide-branding)                                                   |
+  |                                                                             |
+  |  +-----------------------------------------------------------------------+  |
+  |  | Survey  (shows survey, gathers data, holds state)                     |  |
+  |  |                                                                       |  |
+  |  |  title of survey                                                      |  |
+  |  |                                                                       |  |
+  |  |  +-----------------------------------------------------------------+  |  |
+  |  |  | RespondentInfo (optional personal info)                         |  |  |
+  |  |  |                                                                 |  |  |
+  |  |  |   name field                                                    |  |  |
+  |  |  |   email field                                                   |  |  |
+  |  |  +-----------------------------------------------------------------+  |  |
+  |  |                                                                       |  |
+  |  |  +-----------------------------------------------------------------+  |  |
+  |  |  | Question  (generic question container, shows title/error)       |  |  |
+  |  |  |                                                                 |  |  |
+  |  |  |   title of question                                             |  |  |
+  |  |  |   error, if any                                                 |  |  |
+  |  |  |                                                                 |  |  |
+  |  |  |  +-----------------------------------------------------------+  |  |  |
+  |  |  |  | LikertQuestion *or* MultiChoiceQuestion                   |  |  |  |
+  |  |  |  |                                                           |  |  |  |
+  |  |  |  |   list of choices / array of likert buttons               |  |  |  |
+  |  |  |  +-----------------------------------------------------------+  |  |  |
+  |  |  +-----------------------------------------------------------------+  |  |
+  |  |                                                                       |  |
+  |  |  (there can be many Question components in a loop)                    |  |
+  |  +-----------------------------------------------------------------------+  |
+  +-----------------------------------------------------------------------------+
+                    

@@ -1,0 +1,21 @@
+.RespondentInfo {
+  position: relative;
+  padding: 1em;
+}
+
+.RespondentInfo > label {
+  position: absolute;
+  top: -0.5em;
+  left: 0.5em;
+  background-color: white;
+  padding: 0 0.25em;
+}
+
+.RespondentInfo-question {
+  margin-top: 0.5em;
+}
+
+.RespondentInfo-question label {
+  font-weight: bold;
+  margin-right: 0.5em;
+}

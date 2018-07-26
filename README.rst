@@ -16,6 +16,8 @@ Demonstration of Survey.ly survey system:
 - After submitting a form, the data is sent to a server (mocked out in this code),
   and the form is reset.
 
+Live demo at https://joelburton.github.io/survey.ly/
+
 Design
 ------
 
